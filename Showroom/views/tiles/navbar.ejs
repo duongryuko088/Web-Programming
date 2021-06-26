@@ -1,14 +1,18 @@
 <div class="w3-top">
     </div class="w3-bar w3-white w3-wide w3-padding w3-card">
-        <a href="#home" class="w3-bar-item w3-button">
+        <a href="<%= root %>#home" class="w3-bar-item w3-button">
             <b>AB</b> Architects
         </a>
         <!-- Float links to the right. Hide them on small screens-->
         </div class="w3-right w3-hide-small">
-            <a href="login" class="w3-bar-item w3-button w3-text-red" style="float: right">Login</a>
-            <a href="#about" class="w3-bar-item w3-button" style="float: right">About</a>
-            <a href="#contact" class="w3-bar-item w3-button" style="float: right">Contact</a>
-            <a href="#products" class="w3-bar-item w3-button" style="float: right">Products</a>
+            <% if (logged) { %>
+                <a href="<%= root  %>logout" class="w3-bar-item w3-button w3-text-red" style="float: right;">Logout</a>
+            <% } else { %>
+                <a href="<%= root %>login" class="w3-bar-item w3-button w3-text-red" style="float: right;">Login</a>
+            <% } %>     
+            <a href="<%= root %>#about" class="w3-bar-item w3-button" style="float: right;">About</a>
+            <a href="<%= root %>#contact" class="w3-bar-item w3-button" style="float: right;">Contact</a>
+            <a href="<%= root %>#products" class="w3-bar-item w3-button"style="float: right;">Products</a>
         </div>  
     </div>
 </div>
